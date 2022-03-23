@@ -21,12 +21,12 @@ public class Pagamento {
     @ManyToOne
     private Cartao cartao;
 
-    private BigDecimal valorCompra;
+    private Double valorCompra;
 
     public void setCartao(Cartao cartao) {
         this.cartao = cartao;
     }
-    public void setValorCompra(BigDecimal valorCompra) {
+    public void setValorCompra(Double valorCompra) {
         this.valorCompra = valorCompra;
     }
 }

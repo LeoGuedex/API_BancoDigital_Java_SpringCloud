@@ -1,5 +1,8 @@
 package estudosUdemy.banco.gateway.http;
 
+import estudosUdemy.banco.gateway.json.PagamentoJson;
+import estudosUdemy.banco.gateway.json.RetornoJson;
+import estudosUdemy.banco.service.pagamento.PagamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +21,7 @@ public class PagamentoController {
     private PagamentoService pagamentoService;
 
     @RequestMapping(path = "/pagamentos", method = RequestMethod.POST)
-    public ResponseEntity<RetornoJson> pagamento(@Valid @NotNull @RequestBody PagamentoJson pagamentoJson){
+    public ResponseEntity<RetornoJson> pagamento(@Valid @NotNull @RequestBody PagamentoJson pagamentoJson) {
 
         pagamentoService.pagamento(pagamentoJson);
 
