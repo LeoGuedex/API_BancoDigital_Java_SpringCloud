@@ -16,7 +16,7 @@ public class CartaoService {
         return cartaoRepository.findCartaoValido(codigoSegurancaCartao, nroCartao) > 0;
     }
 
-    public boolean isSaldoSuficiente(Integer codigoSegurancaCartao, Integer nroCartao, Double valorCompra) {
+    public boolean isSaldoSuficiente(Integer codigoSegurancaCartao, Integer nroCartao, Integer valorCompra) {
         return cartaoRepository.isSaldoSuficiente(codigoSegurancaCartao, nroCartao, valorCompra) > 0;
     }
 
@@ -25,7 +25,7 @@ public class CartaoService {
     }
 
     @Transactional
-    public void atualizarSaldo(Integer codigoSegurancaCartao, Integer nroCartao, Double valorCompra) {
+    public void atualizarSaldo(Integer codigoSegurancaCartao, Integer nroCartao, Integer valorCompra) {
         cartaoRepository.atualizarSaldo(codigoSegurancaCartao, nroCartao, valorCompra);
     }
 

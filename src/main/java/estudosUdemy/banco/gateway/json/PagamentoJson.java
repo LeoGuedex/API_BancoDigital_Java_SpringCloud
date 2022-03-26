@@ -12,7 +12,7 @@ public class PagamentoJson {
     private Integer codigoSegurancaCartao;
 
     @NotNull(message = "valor de compra é Obrigatório")
-    private Double valorCompra;
+    private Integer valorCompra;
 
     public Integer getNroCartao() {
         return nroCartao;
@@ -30,11 +30,11 @@ public class PagamentoJson {
         this.codigoSegurancaCartao = codigoSegurancaCartao;
     }
 
-    public Double getValorCompra() {
+    public Integer getValorCompra() {
         return valorCompra;
     }
 
-    public void setValorCompra(Double valorCompra) {
+    public void setValorCompra(Integer valorCompra) {
         this.valorCompra = valorCompra;
     }
 }
